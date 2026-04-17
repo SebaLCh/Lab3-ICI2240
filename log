@@ -527,3 +527,23 @@ Fri Apr 17 11:21:54 PM UTC 2026:
  tests:  10|4
 total_score: 25/60
 e645ded
+Fri Apr 17 11:23:19 PM UTC 2026: 
+ hashmap.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:82:23: error: operation on ‘map->size’ may be undefined [-Werror=sequence-point]
+   82 |             map->size = map->size++;
+      |             ~~~~~~~~~~^~~~~~~~~~~~~
+hashmap.c:83:26: error: assignment to ‘long int’ from ‘Pair *’ makes integer from pointer without a cast [-Wint-conversion]
+   83 |             map->current = map->buckets[pos];
+      |                          ^
+hashmap.c:94:15: error: operation on ‘map->size’ may be undefined [-Werror=sequence-point]
+   94 |     map->size = map->size++;
+      |     ~~~~~~~~~~^~~~~~~~~~~~~
+hashmap.c:95:18: error: assignment to ‘long int’ from ‘Pair *’ makes integer from pointer without a cast [-Wint-conversion]
+   95 |     map->current = map->buckets[pos];
+      |                  ^
+cc1: all warnings being treated as errors
+d99f9d9
