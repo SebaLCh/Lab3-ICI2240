@@ -498,3 +498,8 @@ hashmap.c:78:10: error: expected identifier before ‘*’ token
    78 |     map->*buckets[pos] = (Pair **) malloc(sizeof(Pair *));
       |          ^
 1950366
+Fri Apr 17 11:01:58 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+ac53099
