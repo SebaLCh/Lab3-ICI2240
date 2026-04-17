@@ -50,7 +50,7 @@ HashMap * createMap(long capacity) {
     mapa.capacity = capacity;
     mapa.size = 0;
 
-    return mapa;
+    return *mapa;
 }
 
 // 2. Implemente la función void insertMap(HashMap * map, char * key, void * value). 

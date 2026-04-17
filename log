@@ -207,3 +207,20 @@ hashmap.c:54:1: error: control reaches end of non-void function [-Werror=return-
       | ^
 cc1: all warnings being treated as errors
 f470e1f
+Fri Apr 17 09:40:22 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘createMap’:
+hashmap.c:49:10: error: expected identifier before ‘*’ token
+   49 |     mapa.*buckets = NULL;
+      |          ^
+hashmap.c:53:12: error: invalid type argument of unary ‘*’ (have ‘HashMap’ {aka ‘struct HashMap’})
+   53 |     return *mapa;
+      |            ^~~~~
+hashmap.c:54:1: error: control reaches end of non-void function [-Werror=return-type]
+   54 | }
+      | ^
+cc1: all warnings being treated as errors
+d1fd194
