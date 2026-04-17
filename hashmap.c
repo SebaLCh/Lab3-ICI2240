@@ -71,6 +71,7 @@ void insertMap(HashMap * map, char * key, void * value) {
 
 Pair * searchMap(HashMap * map,  char * key) {   
     if(map == NULL) return NULL;
+    if(key == NULL) return NULL;
     
     long pos = hash(key, map->capacity);
     
