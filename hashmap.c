@@ -71,10 +71,14 @@ void insertMap(HashMap * map, char * key, void * value) {
     if(map == NULL) return;
     
     long pos = hash(key, map->capacity);
-    
-    while(map->buckets[pos] != NULL || map->buckets[pos]->key != NULL){
-        pos = pos+1 % map->capacity;    
+
+    if(map->buckets[pos] == NULL || map>buckets[pos]->key == NULL) continue;
+    else{
+        while(map->buckets[pos] != NULL || map->buckets[pos]->key != NULL){
+            pos = pos+1 % map->capacity;    
+        }
     }
+    
     map->buckets[pos] = (Pair *) malloc(sizeof(Pair));
     if(map->buckets[pos] == NULL) return;
     
