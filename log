@@ -561,3 +561,17 @@ hashmap.c:94:15: error: operation on ‘map->size’ may be undefined [-Werror=s
       |     ~~~~~~~~~~^~~~~~~~~~~~~
 cc1: all warnings being treated as errors
 4b9c2bb
+Fri Apr 17 11:26:49 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:82:23: error: operation on ‘map->size’ may be undefined [-Werror=sequence-point]
+   82 |             map->size = map->size++;
+      |             ~~~~~~~~~~^~~~~~~~~~~~~
+hashmap.c:94:15: error: operation on ‘map->size’ may be undefined [-Werror=sequence-point]
+   94 |     map->size = map->size++;
+      |     ~~~~~~~~~~^~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+0ad9e69
