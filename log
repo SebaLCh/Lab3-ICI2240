@@ -650,3 +650,14 @@ Fri Apr 17 11:54:45 PM UTC 2026:
  tests:  11|4
 total_score: 25/60
 6e09d11
+Fri Apr 17 11:55:22 PM UTC 2026: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:145:20: error: ‘capacity’ undeclared (first use in this function)
+  145 |         if (pos == capacity) return NULL;
+      |                    ^~~~~~~~
+hashmap.c:145:20: note: each undeclared identifier is reported only once for each function it appears in
+c5f046e
