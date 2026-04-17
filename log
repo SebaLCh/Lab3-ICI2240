@@ -371,3 +371,20 @@ hashmap.c:76:38: error: expected ‘;’ before ‘}’ token
    77 |     }
       |     ~                                 
 6de5328
+Fri Apr 17 10:38:43 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:71:42: error: ‘return’ with a value, in function returning void [-Wreturn-mismatch]
+   71 |     if(map == NULL || key ==NULL) return NULL;
+      |                                          ^~~~
+hashmap.c:70:6: note: declared here
+   70 | void insertMap(HashMap * map, char * key, void * value) {
+      |      ^~~~~~~~~
+hashmap.c:75:45: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘bucket’; did you mean ‘buckets’?
+   75 |     while(map->buckets[pos] != NULL || map->bucket[pos]->key != NULL){
+      |                                             ^~~~~~
+      |                                             buckets
+25d21cc
