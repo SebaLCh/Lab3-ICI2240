@@ -167,3 +167,26 @@ hashmap.c:49:11: error: expected identifier before ‘*’ token
    49 |     mapa->*buckets = NULL;
       |           ^
 4002a4a
+Fri Apr 17 09:39:24 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘createMap’:
+hashmap.c:49:11: error: expected identifier before ‘*’ token
+   49 |     mapa->*buckets = NULL;
+      |           ^
+hashmap.c:50:9: error: invalid type argument of ‘->’ (have ‘HashMap’ {aka ‘struct HashMap’})
+   50 |     mapa->capacity = capacity;
+      |         ^~
+hashmap.c:51:9: error: invalid type argument of ‘->’ (have ‘HashMap’ {aka ‘struct HashMap’})
+   51 |     mapa->size = 0;
+      |         ^~
+hashmap.c:53:12: error: incompatible types when returning type ‘HashMap’ {aka ‘struct HashMap’} but ‘HashMap *’ {aka ‘struct HashMap *’} was expected
+   53 |     return mapa;
+      |            ^~~~
+hashmap.c:54:1: error: control reaches end of non-void function [-Werror=return-type]
+   54 | }
+      | ^
+cc1: all warnings being treated as errors
+71617ca
