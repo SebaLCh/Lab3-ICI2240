@@ -124,3 +124,17 @@ Fri Apr 17 09:34:05 PM UTC 2026:
  1 file changed, 5 insertions(+), 1 deletion(-)
  tests:  0|0
 28342e8
+Fri Apr 17 09:34:42 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘createMap’:
+hashmap.c:49:19: error: ‘mapa’ is used uninitialized [-Werror=uninitialized]
+   49 |     mapa->buckets = NULL;
+      |                   ^
+hashmap.c:48:14: note: ‘mapa’ was declared here
+   48 |     HashMap *mapa;
+      |              ^~~~
+cc1: all warnings being treated as errors
+d2f9e23
