@@ -76,7 +76,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     
     while(map->buckets[pos] != NULL){
         if(is_equal(map->buckets[pos]->key, key) == 1){
-            map->current = map->buckets[pos];
+            map->current = pos;
             map->size = map->size-1;
             return map->buckets[pos];
         }
