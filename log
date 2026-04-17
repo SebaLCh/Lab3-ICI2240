@@ -423,3 +423,24 @@ hashmap.c:81:1: error: expected identifier or ‘(’ before ‘}’ token
    81 | }
       | ^
 55a3063
+Fri Apr 17 10:50:38 PM UTC 2026: 
+ hashmap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:75:16: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘bucket’; did you mean ‘buckets’?
+   75 |     while(map->bucket[pos] != NULL || map->buckets[pos]->key != NULL){
+      |                ^~~~~~
+      |                buckets
+hashmap.c: At top level:
+hashmap.c:79:8: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   79 |     map->buckets[pos]->key = key;
+      |        ^~
+hashmap.c:80:8: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   80 |     map->buckets[pos]->value = value;
+      |        ^~
+hashmap.c:81:1: error: expected identifier or ‘(’ before ‘}’ token
+   81 | }
+      | ^
+f49f80f
