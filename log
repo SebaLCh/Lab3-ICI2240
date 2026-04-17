@@ -57,3 +57,13 @@ hashmap.c:81:23: error: returning ‘Pair **’ from a function with incompatibl
    81 |             return map->buckets;
       |                    ~~~^~~~~~~~~
 ecede18
+Fri Apr 17 07:05:16 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:79:26: error: assignment to ‘long int’ from ‘Pair *’ makes integer from pointer without a cast [-Wint-conversion]
+   79 |             map->current = map->buckets[pos];
+      |                          ^
+4bedb6f
