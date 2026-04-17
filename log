@@ -464,3 +464,17 @@ Fri Apr 17 10:51:22 PM UTC 2026:
  1 file changed, 1 deletion(-)
  tests:  0|0
 f7b7aa6
+Fri Apr 17 10:59:00 PM UTC 2026: 
+ hashmap.c | 3 +++
+ 1 file changed, 3 insertions(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:78:23: error: assignment to ‘Pair *’ from incompatible pointer type ‘Pair **’ [-Wincompatible-pointer-types]
+   78 |     map->buckets[pos] = (Pair **) malloc(sizeof(Pair *));
+      |                       ^
+hashmap.c:79:13: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘bucket’; did you mean ‘buckets’?
+   79 |     if(map->bucket[pos] == NULL) return;
+      |             ^~~~~~
+      |             buckets
+b37672a
