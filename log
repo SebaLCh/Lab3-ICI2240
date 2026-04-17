@@ -478,3 +478,13 @@ hashmap.c:79:13: error: ‘HashMap’ {aka ‘struct HashMap’} has no member n
       |             ^~~~~~
       |             buckets
 b37672a
+Fri Apr 17 10:59:12 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:78:23: error: assignment to ‘Pair *’ from incompatible pointer type ‘Pair **’ [-Wincompatible-pointer-types]
+   78 |     map->buckets[pos] = (Pair **) malloc(sizeof(Pair *));
+      |                       ^
+7f0be64
