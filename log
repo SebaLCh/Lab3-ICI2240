@@ -295,3 +295,15 @@ hashmap.c:59:1: error: control reaches end of non-void function [-Werror=return-
       | ^
 cc1: all warnings being treated as errors
 4dbc674
+Fri Apr 17 10:26:23 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘createMap’:
+hashmap.c:49:8: error: ‘map’ undeclared (first use in this function); did you mean ‘mapa’?
+   49 |     if(map == NULL) return NULL;
+      |        ^~~
+      |        mapa
+hashmap.c:49:8: note: each undeclared identifier is reported only once for each function it appears in
+87523d7
