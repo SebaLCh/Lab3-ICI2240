@@ -21,3 +21,14 @@ hashmap.c:83:21: error: ‘size’ undeclared (first use in this function)
       |                     ^~~~
 hashmap.c:83:21: note: each undeclared identifier is reported only once for each function it appears in
 8368d8f
+Fri Apr 17 06:51:13 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:83:19: error: operation on ‘map->size’ may be undefined [-Werror=sequence-point]
+   83 |         map->size = map->size--;
+      |         ~~~~~~~~~~^~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+a787197
