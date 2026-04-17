@@ -398,3 +398,28 @@ Fri Apr 17 10:43:44 PM UTC 2026:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 9284fe1
+Fri Apr 17 10:50:20 PM UTC 2026: 
+ hashmap.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:75:16: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘bucket’; did you mean ‘buckets’?
+   75 |     while(map->bucket[pos] != NULL || map->bucket[pos]->key != NULL){
+      |                ^~~~~~
+      |                buckets
+hashmap.c:75:44: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘bucket’; did you mean ‘buckets’?
+   75 |     while(map->bucket[pos] != NULL || map->bucket[pos]->key != NULL){
+      |                                            ^~~~~~
+      |                                            buckets
+hashmap.c: At top level:
+hashmap.c:79:8: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   79 |     map->bucket[pos]->key = key;
+      |        ^~
+hashmap.c:80:8: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   80 |     map->bucket[pos]->value = value;
+      |        ^~
+hashmap.c:81:1: error: expected identifier or ‘(’ before ‘}’ token
+   81 | }
+      | ^
+55a3063
