@@ -517,3 +517,9 @@ hashmap.c:75:68: error: continue statement not within a loop
    75 |     if(map->buckets[pos] == NULL || map>buckets[pos]->key == NULL) continue;
       |                                                                    ^~~~~~~~
 ac69664
+Fri Apr 17 11:20:39 PM UTC 2026: 
+ hashmap.c | 13 +++++++++----
+ 1 file changed, 9 insertions(+), 4 deletions(-)
+ tests:  10|4
+total_score: 25/60
+9a2b826
