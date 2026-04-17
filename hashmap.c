@@ -80,7 +80,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     }
     else{
         map->current = pos;
-        map->size = map->size--;
+        map->size = map->size-1;
         return map->buckets[pos];
     }
 
