@@ -70,13 +70,13 @@ HashMap * createMap(long capacity) {
 void insertMap(HashMap * map, char * key, void * value) {
     long pos = hash(key, map->capacity);
 
-    while(map->buckets[pos] != NULL && map->buckets[pos]->key != NULL]){
+    while(map->buckets[pos] != NULL && map->buckets[pos]->key != NULL){
         if(is_equal(key,map->buckets[pos]->key) == 1){
             map->buckets[pos]->value = value;
             map->current = pos;
             return;
         }
-        pos = pos+1 % map->capacity
+        pos = pos+1 % map->capacity;
     }
 
     Pair * par = createPair(key, value);
@@ -180,7 +180,7 @@ Pair * nextMap(HashMap * map) {
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
     
-    HashMaps *oldBuckets = map->buckets;
+    HashMap *oldBuckets = map->buckets;
 
     HashMap *mapa = createMap(map->capacity*2);
     map = mapa;

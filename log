@@ -779,3 +779,24 @@ hashmap.c:190:61: error: invalid type argument of ‘->’ (have ‘int’)
       |                                                             ^~
 cc1: all warnings being treated as errors
 aec11f9
+Sat Apr 18 12:26:57 AM UTC 2026: 
+ hashmap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:183:27: error: initialization of ‘HashMap *’ {aka ‘struct HashMap *’} from incompatible pointer type ‘Pair **’ [-Wincompatible-pointer-types]
+  183 |     HashMap *oldBuckets = map->buckets;
+      |                           ^~~
+hashmap.c:189:26: error: invalid operands to binary != (have ‘HashMap’ {aka ‘struct HashMap’} and ‘void *’)
+  189 |         if(oldBuckets[i] != NULL){
+      |            ~~~~~~~~~~~~~ ^~
+      |                      |
+      |                      HashMap {aka struct HashMap}
+hashmap.c:190:41: error: invalid type argument of ‘->’ (have ‘HashMap’ {aka ‘struct HashMap’})
+  190 |             insertMap(map, oldBuckets[i]->key, oldBuckets[i]->value);
+      |                                         ^~
+hashmap.c:190:61: error: invalid type argument of ‘->’ (have ‘HashMap’ {aka ‘struct HashMap’})
+  190 |             insertMap(map, oldBuckets[i]->key, oldBuckets[i]->value);
+      |                                                             ^~
+e6c003b
