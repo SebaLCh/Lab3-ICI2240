@@ -183,9 +183,8 @@ void enlarge(HashMap * map) {
     HashMap *oldBuckets = map;
 
     HashMap *mapa = createMap(map->capacity*2);
-    mapa->size = 0;
     
-    for(long i = 0; i <= mapa->capacity; i++){
+    for(long i = 0; i <= map->capacity; i++){
         if(oldBuckets->buckets[i] != NULL){
             insertMap(mapa, oldBuckets->buckets[i]->key, oldBuckets->buckets[i]->value);
         }
