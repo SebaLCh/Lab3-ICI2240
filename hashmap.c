@@ -76,7 +76,7 @@ void insertMap(HashMap * map, char * key, void * value) {
             map->current = pos;
             return;
         }
-        pos = pos+1 % map->capacity;
+        pos = (pos+1) % map->capacity;
     }
 
     Pair * par = createPair(key, value);
