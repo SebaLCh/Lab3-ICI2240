@@ -737,3 +737,45 @@ hashmap.c:183:5: error: ‘oldBuckets’ undeclared (first use in this function)
 hashmap.c:183:5: note: each undeclared identifier is reported only once for each function it appears in
 cc1: all warnings being treated as errors
 9f861e9
+Sat Apr 18 12:25:54 AM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:73:70: error: expected ‘)’ before ‘]’ token
+   73 |     while(map->buckets[pos] != NULL && map->buckets[pos]->key != NULL]){
+      |          ~                                                           ^
+hashmap.c:73:70: error: expected statement before ‘]’ token
+hashmap.c:73:5: error: this ‘while’ clause does not guard... [-Werror=misleading-indentation]
+   73 |     while(map->buckets[pos] != NULL && map->buckets[pos]->key != NULL]){
+      |     ^~~~~
+hashmap.c:73:71: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘while’
+   73 |     while(map->buckets[pos] != NULL && map->buckets[pos]->key != NULL]){
+      |                                                                       ^
+hashmap.c:73:71: error: expected statement before ‘)’ token
+hashmap.c:79:36: error: expected ‘;’ before ‘}’ token
+   79 |         pos = pos+1 % map->capacity
+      |                                    ^
+      |                                    ;
+   80 |     }
+      |     ~                               
+hashmap.c: In function ‘enlarge’:
+hashmap.c:183:5: error: unknown type name ‘HashMaps’; did you mean ‘HashMap’?
+  183 |     HashMaps *oldBuckets = map->buckets;
+      |     ^~~~~~~~
+      |     HashMap
+hashmap.c:183:28: error: initialization of ‘int *’ from incompatible pointer type ‘Pair **’ [-Wincompatible-pointer-types]
+  183 |     HashMaps *oldBuckets = map->buckets;
+      |                            ^~~
+hashmap.c:189:26: error: comparison between pointer and integer [-Werror]
+  189 |         if(oldBuckets[i] != NULL){
+      |                          ^~
+hashmap.c:190:41: error: invalid type argument of ‘->’ (have ‘int’)
+  190 |             insertMap(map, oldBuckets[i]->key, oldBuckets[i]->value);
+      |                                         ^~
+hashmap.c:190:61: error: invalid type argument of ‘->’ (have ‘int’)
+  190 |             insertMap(map, oldBuckets[i]->key, oldBuckets[i]->value);
+      |                                                             ^~
+cc1: all warnings being treated as errors
+aec11f9
