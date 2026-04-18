@@ -80,7 +80,7 @@ void insertMap(HashMap * map, char * key, void * value) {
     }
 
     Pair * par = createPair(key, value);
-    map->bucket[pos] = par;
+    map->buckets[pos] = par;
     map->size = map->size+1;
     map->current = pos;
 }
