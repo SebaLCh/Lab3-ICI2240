@@ -180,14 +180,14 @@ Pair * nextMap(HashMap * map) {
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
     
-    Pair *oldBuckets = map->buckets;
+    HashMap *oldBuckets = map;
 
     HashMap *mapa = createMap(map->capacity*2);
     map = mapa;
     
     for(long i = 0; i <= map->capacity/2; i++){
-        if(oldBuckets[i] != NULL){
-            insertMap(map, oldBuckets[i]->key, oldBuckets[i]->value);
+        if(oldBuckets->buckets[i] != NULL){
+            insertMap(map, oldBuckets->buckets[i]->key, oldBuckets->buckets[i]->value);
             map->size = map->size+1;
         }
     }
