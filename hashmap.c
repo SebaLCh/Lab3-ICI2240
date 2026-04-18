@@ -181,10 +181,9 @@ void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
     
     Pair **oldBuckets = map->buckets;
-    //long oldCapacity = map->capacity;
 
-    map->buckets = (Pair **) calloc(capacity*2, sizeof(Pair *));
-        if(mapa->buckets == NULL) return;
+    map->buckets = (Pair **) calloc(map->capacity*2, sizeof(Pair *));
+        if(map->buckets == NULL) return;
     
     map->size = 0;
     map->capacity = map->capacity*2;
